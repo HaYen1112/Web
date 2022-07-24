@@ -11,11 +11,11 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public isLogged():Observable<any> {
-    return this.httpClient.get(environment.REST_API + "/check-logged");
+  public isLogged():boolean {
+    return localStorage.getItem("token") != null;
   }
 
   public login(user:User):Observable<any> {
-    return this.httpClient.post(environment.REST_API + "/security_check_login", user);
+    return this.httpClient.post(environment.REST_API + "/authenticate", user);
   }
 }

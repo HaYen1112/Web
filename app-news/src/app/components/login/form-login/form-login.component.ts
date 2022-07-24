@@ -1,5 +1,6 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit, Injectable, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { User } from 'src/model/user';
 import { LoginService } from 'src/service/login.service';
 @Component({
@@ -7,28 +8,35 @@ import { LoginService } from 'src/service/login.service';
   templateUrl: './form-login.component.html',
   styleUrls: ['./form-login.component.scss'],
 })
-
 @Injectable({ providedIn: 'root' })
-export class FormLoginComponent implements OnInit {
-
+export class FormLoginComponent implements OnInit, OnDestroy {
   user: User = new User();
-
+  subscription: Subscription = new Subscription();
   constructor(private router: Router, private loginService: LoginService) {}
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 
   ngOnInit(): void {
     this.isLogged();
   }
 
   isLogged(): void {
-    this.loginService.isLogged().subscribe((response) => {
-      if (response.data === true) {
-        this.router.navigate(['/']);
-      }
-    });
+    if (this.loginService.isLogged()) {
+      this.router.navigate(['/']);
+    }
   }
 
-  login():void {
-    this.loginService.login(this.user).subscribe((response) => {
-    });
+  onClickLogin(): void {
+    this.subscription = this.loginService
+      .login(this.user)
+      .subscribe((response) => {
+        if (response.data != null) {
+          localStorage.setItem('token', response.data);
+          this.router.navigate(['/']);
+        } else {
+          alert(response.message);
+        }
+      });
   }
 }

@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 import com.example.mypkg.dto.UserAppDTO;
 import com.example.mypkg.entity.UserApp;
 import com.example.mypkg.repository.UserAppRepository;
-import com.example.mypkg.service.UserService;
+import com.example.mypkg.service.UserAppService;
 
 @Service
 @Transactional(rollbackOn = Exception.class)
-public class UserServiceImp implements UserService {
+public class UserAppServiceImp implements UserAppService {
 	@Autowired
 	private UserAppRepository userAppRepository;
 	@Autowired
