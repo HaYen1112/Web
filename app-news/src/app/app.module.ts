@@ -39,7 +39,7 @@ import { Cart1Component } from './components/shopping_cart/cart1/cart1.component
 const route: Routes = [
   { path: 'search', component: LastNewReadingsComponent },
   { path: '', component: PageBodyComponent},
-  { path: 'imforProduct', component: Products_nam_nu_treemComponent},
+  { path: 'imforProduct/:productType', component: Products_nam_nu_treemComponent},
   { path: 'dangnhap', component: LoginComponent},
   { path: 'dangky', component: SignupComponent},
   { path: 'singledetail', component: Single_detailComponent},

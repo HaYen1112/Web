@@ -100,17 +100,17 @@ export class MenuComponent implements OnInit {
 
     this.marginTopDHN = '12px'; this.marginTopDHNU = '12px'; this.marginTopDHTE = '12px';
     this.marginTopTK = '12px'; this.marginTopGH = '12px'; this.marginTopLH = '12px';
-    if (index == 'nam' && this.router.url == '/imforProduct' ) {
+    if (index == 'nam' && this.router.url == '/imforProduct/man' ) {
       this.colorNam = 'black';
       this.colorTE = 'white';
       this.colorNu = 'white';
     }
-    if (index == 'nu' && this.router.url == '/imforProduct' ) {
+    if (index == 'nu' && this.router.url == '/imforProduct/woman' ) {
       this.colorNu = 'black';
       this.colorNam = 'white';
       this.colorTE = 'white';
     }
-    if (index == 'treem' && this.router.url == '/imforProduct' ) {
+    if (index == 'treem' && this.router.url == '/imforProduct/kid' ) {
       this.colorTE = 'black';
       this.colorNam = 'white';
       this.colorNu = 'white';

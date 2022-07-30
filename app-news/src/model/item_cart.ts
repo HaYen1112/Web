@@ -1,9 +1,9 @@
 export class ItemCart {
-  idProduct?: string;
+  productId?: number;
   quantity?: number;
 
-  constructor(idProduct: string, quantity: number) {
-    this.idProduct = idProduct;
+  constructor(productId: number, quantity: number) {
+    this.productId = productId;
     this.quantity = quantity;
   }
 }

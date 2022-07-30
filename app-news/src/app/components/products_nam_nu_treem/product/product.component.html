@@ -55,206 +55,27 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-4 sp_list sp_list">
+              <div *ngFor="let product of products" class="col-md-4 sp_list">
                 <div class="khunghinhsp">
                   <a href="details.html">
-                    <img src="./assets/images/sp1.png"
+                    <img [src]="product.img"
                   /></a>
                 </div>
                 <div class="row">
                   <div class="des col-6">
-                    <div class="msp">Q662J301Y</div>
-                    <a href="details.html">Đồng hồ nam</a>
-                    <div class="giasp">440,000</div>
+                    <div class="msp">{{product.code}}</div>
+                    <a href="details.html">{{product.productName}}</a>
+                    <div class="giasp">{{product.price}}</div>
                   </div>
                   <div class="des col-6">
                     <button
                       class="btn btn-success"
                       type="button"
-                      (click)="onClickAddProductToCart('Q662J301Y')"
+                      (click)="onClickAddProductToCart(product.id)"
                     >
                       Add
                     </button>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp2.png"
-                  /></a>
-                </div>
-                <div class="row">
-                  <div class="des col-6">
-                    <div class="msp">Q662J301Y</div>
-                    <a href="details.html">Đồng hồ nam</a>
-                    <div class="giasp">440,000</div>
-                  </div>
-                  <div class="des col-6">
-                    <button
-                      class="btn btn-success"
-                      type="button"
-                      (click)="onClickAddProductToCart('11312AA1Y')"
-                    >
-                      Add
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp3.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp4.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp5.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp1.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp2.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp3.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp4.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp1.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp2.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp3.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp1.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp2.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
-                </div>
-              </div>
-              <div class="col-md-4 sp_list">
-                <div class="khunghinhsp">
-                  <a href="details.html">
-                    <img src="./assets/images/sp3.png"
-                  /></a>
-                </div>
-                <div class="des">
-                  <div class="msp">Q662J301Y</div>
-                  <a href="details.html">Đồng hồ nam</a>
-                  <div class="giasp">440,000</div>
                 </div>
               </div>
             </div>
